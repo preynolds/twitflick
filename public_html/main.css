@@ -1,0 +1,377 @@
+html, body, div, span, h1, h2, h3, h4, h5, h6, p, 
+blockquote, a, abbr, acronym, address, cite, em, 
+img, q, strong, sub, sup, dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend, table, caption, 
+tbody, tfoot, thead, tr, th, td {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+  background: transparent;
+  list-style: none;
+  border-collapse: collapse;
+  border-spacing: 0;
+  -webkit-user-select: none;
+  -webkit-text-size-adjust: none;
+  -webkit-tap-highlight-color: rgba(0,0,0,0);
+}
+
+body {
+	position: relative;
+	margin: 0;
+	padding: 0px 3px;
+	background: #fefefe;
+	color:#fff;
+	font:16px/19px Helvetica;
+	width: 314px;
+	-webkit-text-size-adjust: none;
+	background: url('images/bg.jpg');
+	min-height:436px;
+}
+
+p{
+  font-weight:bold;
+  margin-bottom:8px;
+}
+
+#settings{
+  position:absolute;
+  right:37px;
+  top:20px;
+  display:block;
+  height:32px;
+  width:32px;
+  display:none;
+}
+
+#settings.active{
+  display:block;
+}
+
+#settings a{
+  display:block;
+  height:32px;
+  width:32px;
+  background: url('images/settings.png') no-repeat;
+  text-indent:-9999px;
+  overflow:hidden;
+}
+
+#logo{
+  background: url('images/twitflick.png') no-repeat;
+  width:100px;
+  height:25px;
+  position:relative;
+  left:27px;
+  top:30px;
+}
+
+#thinking{
+  display:none;
+  position:absolute;
+  top:200px;
+  left:145px;
+  background: url('images/thinking.png') no-repeat;
+  width:32px;
+  height:32px;
+  -webkit-animation: thinking 2.5s linear infinite;
+}
+
+@-webkit-keyframes thinking {
+  0%   { -webkit-transform: rotateZ(0deg); }
+  100% { -webkit-transform: rotateZ(360deg); }
+}
+
+#thinking.active{
+  display:block;
+}
+
+#setup{
+  padding:50px 27px 0 27px;
+  display:none;
+}
+
+#setup.active{
+  display:block;
+}
+
+#results{
+  position:relative;
+  display:none;
+  top:40px;
+}
+
+#results.active{
+  display:block;
+}
+
+#results p{
+  padding-left:30px;
+  font-size:12px;
+  line-height:14px;
+}
+
+#twitter .new, #twitter .returning{
+  display:none;
+}
+
+#twitter .active{
+  display:block;
+}
+
+#twitter .new{
+  margin-bottom:24px;
+  width:260px;
+}
+
+#twitter #twittertoken{
+  position:relative;
+  display:block;
+  height:52px;
+  width:260px;
+  background: url('images/twitter.png') no-repeat;
+  text-indent:-9999px;
+  overflow:hidden;
+}
+
+#twitter .returning{
+  margin-bottom:24px;
+  width:260px;
+  background: url('images/twitter2.png') no-repeat;
+}
+
+#twitter .returning p{
+  position:relative;
+  float:left;
+  width:200px;
+  left:33px;
+  top:10px;
+}
+
+#twitter #changeaccount{
+  position:relative;
+  padding:10px;
+  display:block;
+  height:25px;
+  width:119px;
+  background: url('images/change.png') no-repeat 10px 10px;
+  text-indent:-9999px;
+  overflow:hidden;
+}
+
+#flickr{
+  margin-bottom:24px;
+}
+
+#flickr #inputusername{
+  margin-bottom:8px;
+}
+
+#flickr #getphotos{
+  position:relative;
+  display:block;
+  height:36px;
+  width:119px;
+  background: url('images/getphotos.png') no-repeat;
+  text-indent:-9999px;
+  overflow:hidden;
+}
+
+.menu{
+  display:none;
+  width:40px;
+  padding:8px;
+  background-color:#ffd822;
+  position:absolute;
+  right:10px;
+  text-align:center;
+  -webkit-border-bottom-right-radius: 5px;
+  -webkit-border-bottom-left-radius: 5px;
+  -moz-border-radius-bottomright: 5px;
+  -moz-border-radius-bottomleft: 5px;
+  border-bottom-right-radius: 5px;
+  border-bottom-left-radius: 5px;
+}
+
+a, a:link, a:visited, a:hover, a:active{
+	color:#111;
+}
+
+.menu.active{
+  display:block;
+}
+
+.window{
+	display:block;
+	padding:5px;
+	border: 1px solid #ccc;
+	height:50px;
+	background-color:#fff;
+	overflow-x: auto;
+	overflow-x: hidden;
+	font:10px Helvetica;
+}
+
+.photos{
+  position:absolute;
+	margin-left:-11px;
+	top:40px;
+	clear:both;
+	width: 260px;
+	padding:10px 30px;
+}
+
+.photos div.photo{
+	float:left;
+	width:75px;
+	height:75px;
+  margin-bottom: 11px;
+  margin-left: 11px;
+}
+
+div.error{
+  width:240px;
+	background:#f00;
+	padding: 8px 10px 1px;
+	font-weight:bold;
+	color:#fff;
+	font-size:13px;
+	background: #f00 url('images/uhoh.png') no-repeat 10px 10px;
+	text-indent:24px;
+}
+
+.twitteractions{
+	clear:both;
+}
+
+#modal{
+	position:absolute;
+	top:0;
+	left:0;
+	background-color: rgba(0,0,0,.7);
+	display: none;
+}
+
+#modal .contents{
+ display:none; 
+}
+
+#modal div.active{
+ display:block; 
+}
+
+body.modal #modal{
+	display: block;
+}
+
+#modal .inside{
+	position:relative;
+	width:320px;
+	height:440px;
+	background-color: #f4f4f4;
+	background-size: 100%;
+	background-repeat: no-repeat;
+}
+
+#modal .post{
+	position:relative;
+	width:300px;
+	height:420px;
+	padding:10px;
+	background-color: rgba(0,0,0,.6);
+}
+
+#modal .close{
+	float:right;
+	margin-right:5px;
+}
+
+#modal .close a, #modal .close a:link, #modal .close a:visited, #modal .close a:hover, #modal .close a:active{
+	color:#111;
+	text-shadow:1px 1px 1px #efefef;
+}
+
+#modal .close.reverse a, #modal .close.reverse a:link, #modal .close.reverse a:visited, #modal .close.reverse a:hover, #modal .close.reverse a:active{
+	color:#eee;
+	text-shadow:1px 1px 1px #111;
+}
+
+h2{
+	color:#111;
+	font-size:18px;
+	margin-bottom:8px;
+}
+
+h2.reverse{
+	color:#fff;
+}
+
+#modal textarea{
+	position:relative;
+	left:-2px;
+	font-size:14px;
+	padding:2px;
+}
+
+a.button{
+	padding: 6px 15px 6px;
+	font-size: 13px;
+	line-height: 40px;
+	text-align:center;
+	-webkit-border-radius: 5px;
+	text-shadow: white 1px 1px 0px;
+	border:1px solid #dadada;
+	color:#000;
+	text-decoration:none;
+	background: -webkit-gradient(
+	    linear,
+	    left bottom,
+	    left top,
+	    color-stop(1, rgb(255,255,255)),
+	    color-stop(0, rgb(228,228,228))
+	);
+}
+
+a.button:hover{
+	border:1px solid #aaaaaa;
+	text-decoration:none;
+	background: -webkit-gradient(
+	    linear,
+	    left bottom,
+	    left top,
+	    color-stop(1, rgb(245,245,245)),
+	    color-stop(0, rgb(208,208,208))
+	);
+}
+
+a.button:active{
+	text-shadow: none;
+	background: -webkit-gradient(
+	    linear,
+	    left bottom,
+	    left top,
+	    color-stop(1, rgb(208,208,208)),
+	    color-stop(0, rgb(208,208,208))
+	);
+}
+
+input{
+  border: 1px solid #ccc;
+  padding: 5px 5px 6px;
+  margin: 0;
+  font-size: 13px;
+  width:95%;
+  /*
+  -webkit-transition: border-color 100ms;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px 5px 5px 5px;
+  */
+
+}
+
+input:focus{
+  border-color: #005de1;
+	outline: none;
+}

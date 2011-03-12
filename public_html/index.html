@@ -1,0 +1,69 @@
+<!doctype html>
+<html>
+  <head>
+    <title>TwitFlick</title>
+    <meta name="viewport" content="width=320; initial-scale=1.0; maximum-scale=1.0; user-scalable=no;"/>
+    <meta name="description" content="Update your twitter status with a flic.kr short URL. Step 1: Sign into twitter. Step 2: Enter a flickr username. Step 3: Select an image and tweet it!" />
+
+    <script src="https://ajax.googleapis.com/ajax/libs/mootools/1.3.1/mootools-yui-compressed.js"></script>
+    <script src="/scripts.js"></script>
+    <link rel="stylesheet" type="text/css" href="/main.css">
+    
+  </head>
+    
+  <body>    
+    <div id="settings"><a href="">Settings</a></div>
+    
+    <div id="logo"></div>
+    
+    <div id="thinking"></div>
+    
+    <div id="results">
+      <div class="stats">
+        <p class="person"><span></span>'s photostream</p>
+      </div>
+      <div class="photos">
+      </div>
+    </div>
+  
+    <div id="setup" class="">
+      <p>Update your twitter status <br />with a short flic.kr URL.<br><br></p>
+      
+      <div id="twitter">
+        <div class="new">
+          <p>Get started</p>
+          <a href="/getTwitterRequestToken" id="twittertoken">Sign in with Twitter</a>
+        </div>
+        
+        <div class="returning">
+          <p>@username</p>
+          <a href="/getTwitterRequestToken" id="changeaccount">Change account</a>
+        </div>
+      </div>
+      
+      <div id="flickr">
+        <p>Enter your flickr username</p>
+        <input type="text" name="username" placeholder="username" value="" id="inputusername"><br>
+        <a href="/getFlickrPhotos" class="getphotos" id="getphotos">Get photos</a>
+      </div>
+      
+      <div id="errors"></div>
+    </div>
+    
+    <div id="modal">
+      <div class="inside">
+        <div class="contents post">
+          <div class="close reverse">
+            <a href="">close</a>
+          </div>
+          <h2 class="reverse"></h2><br>
+          <textarea name="te" rows="3" cols="34" maxlength="140"></textarea><br>
+          <a href="/setTwitterStatus" class="button" id="twitterupdatestatus">Post to twitter</a><br>
+        </div>
+        
+      </div>
+    </div>
+      
+  </body>
+
+</html>
